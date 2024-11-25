@@ -171,7 +171,7 @@ To ensure well-organized and easily navigable documentation, each feature will h
 
 **A. Create a New README File**
 
-For each new feature, create a markdown file (`.md`) in the `docs` folder.
+For each new feature, create a markdown file (`<FeatureName>.md`) in the `root` folder.
 
 * **Naming Convention:** `<FeatureName>.md`  (e.g., `UserAuthentication.md`)
 
@@ -186,7 +186,7 @@ Each feature README should include the following sections:
 
 3. **Usage:** Instructions on how to use the feature.
 
-4. **Screenshots/Examples:** Include relevant visual aids (screenshots) or code snippets to illustrate the feature.
+4. **Screenshots/Examples:** Include relevant visual aids (screenshots) or code examples to illustrate the feature.
 
 5. **Known Issues/Future Improvements:** List any known limitations or planned enhancements. (e.g., "Future improvements include adding user-defined custom themes.")
 
