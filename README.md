@@ -197,6 +197,9 @@ For questions or inquiries, please open an issue on this repository.
 
 We are excited to see your contributions and build a valuable resource for the Swift community together!
 
+<h2 style="color: red;" > For a way to use this package: click this <a href="AddToContacts.md">link</a>
+</h2>
+
 ## License
 
 This documentation is licensed under the [GNU Free Documentation License](LICENSE).

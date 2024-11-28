@@ -52,7 +52,6 @@ public class ContactViewController: UINavigationController {
     // MARK: life cycle methods
     
     public override func viewDidLoad() {
-        print("contact \(contact)")
         let controller =  CNContactViewController(
             forNewContact: contact.toCNMutableContact()
         )
