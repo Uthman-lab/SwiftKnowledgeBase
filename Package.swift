@@ -20,7 +20,7 @@ let package = Package(
         .target(
             name: "AddToContact"),
         .testTarget(
-            name: "AddToContact",
-            dependencies: ["AddToContact"]),
+            name: "AddToContactTest",
+            dependencies: ["AddToContactTest"]),
     ]
 )
