@@ -21,6 +21,6 @@ let package = Package(
             name: "AddToContact"),
         .testTarget(
             name: "AddToContactTest",
-            dependencies: ["AddToContactTest"]),
+            dependencies: ["AddToContact"]),
     ]
 )
