@@ -35,7 +35,10 @@ public struct ContactAppView: UIViewControllerRepresentable {
         return contactViewController
     }
 
-    public func updateUIViewController(_ uiViewController: ContactViewController, context: Context) {
+    public func updateUIViewController(
+        _ uiViewController: ContactViewController,
+        context: Context
+    ) {
         // Update the ViewController here
     }
 }
