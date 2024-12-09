@@ -12,7 +12,7 @@ public struct Contact {
     public var jobTitle: String = ""
     public var phoneNumbers: [String] = []
     public var emailAddresses: [String] = []
-    public var postalAddresses: [String] = [] 
+    public var postalAddresses: [String] = []
     public var birthday: DateComponents?
     public var note: String = ""
     public var imageData: Data?

@@ -9,11 +9,11 @@ import XCTest
 @testable import AddToContact
 
 final class ContactModelTest: XCTestCase {
-    
+
     func test_ContactModel_DefaultInitialization() {
         // When
         let contact = Contact()
-        
+
         // Then
         XCTAssertEqual(contact.givenName, "")
         XCTAssertEqual(contact.familyName, "")
@@ -31,7 +31,7 @@ final class ContactModelTest: XCTestCase {
         XCTAssertEqual(contact.note, "")
         XCTAssertNil(contact.imageData)
     }
-    
+
     func test_ContactModel_CustomInitialization() {
         // Given
         let givenName = "John"
@@ -39,7 +39,7 @@ final class ContactModelTest: XCTestCase {
         let phoneNumbers = ["123-456-7890", "098-765-4321"]
         let emailAddresses = ["john.doe@example.com"]
         let note = "A test contact"
-        
+
         // When
         let contact = Contact(
             givenName: givenName,
@@ -48,7 +48,7 @@ final class ContactModelTest: XCTestCase {
             emailAddresses: emailAddresses,
             note: note
         )
-        
+
         // Then
         XCTAssertEqual(contact.givenName, givenName)
         XCTAssertEqual(contact.familyName, familyName)
@@ -56,8 +56,7 @@ final class ContactModelTest: XCTestCase {
         XCTAssertEqual(contact.emailAddresses, emailAddresses)
         XCTAssertEqual(contact.note, note)
     }
-    
-    
+
     func test_toCNMutableContact_ShouldHaveRequiredFields() {
         // Given
         let contact = Contact(
@@ -70,10 +69,10 @@ final class ContactModelTest: XCTestCase {
             note: "Test note",
             imageData: Data([0x00, 0x01, 0x02])
         )
-        
+
         // When
         let cnContact = contact.toCNMutableContact()
-        
+
         // Then
         XCTAssertEqual(cnContact.givenName, "John")
         XCTAssertEqual(cnContact.familyName, "Doe")
@@ -89,15 +88,14 @@ final class ContactModelTest: XCTestCase {
         XCTAssertEqual(cnContact.note, "Test note")
         XCTAssertEqual(cnContact.imageData, Data([0x00, 0x01, 0x02]))
     }
-    
-    
+
     func test_toCNMutableContact_MustBeEmpty() {
         // Given
         let contact = Contact()
-        
+
         // When
         let cnContact = contact.toCNMutableContact()
-        
+
         // Then
         XCTAssertEqual(cnContact.givenName, "")
         XCTAssertEqual(cnContact.familyName, "")
@@ -108,5 +106,5 @@ final class ContactModelTest: XCTestCase {
         XCTAssertEqual(cnContact.note, "")
         XCTAssertNil(cnContact.imageData)
     }
-    
+
 }

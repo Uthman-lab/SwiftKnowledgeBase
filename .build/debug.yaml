@@ -1,0 +1,88 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "AddToContact-debug.module": ["<AddToContact-debug.module>"]
+  "AddToContactPackageTests-debug.test": ["<AddToContactPackageTests-debug.test>"]
+  "AddToContactTest-debug.module": ["<AddToContactTest-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<AddToContact-debug.module>"]
+  "test": ["<AddToContact-debug.module>","<AddToContactPackageTests-debug.test>","<AddToContactTest-debug.module>"]
+default: "main"
+nodes:
+  "/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Sources/AddToContact/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Tests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Sources/AddToContact/ContactApp.swift","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Sources/AddToContact/ContactModel.swift"]
+    outputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/sources"]
+    description: "Write auxiliary file /Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/sources"
+
+  "/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/ContactApp.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/ContactModel.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/ContactAppTest.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/ContactModelTest.swift.o"]
+    outputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactPackageTests.product/Objects.LinkFileList"
+
+  "/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Tests/AddtoContactTest/ContactAppTest.swift","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Tests/AddtoContactTest/ContactModelTest.swift"]
+    outputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/sources"]
+    description: "Write auxiliary file /Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/sources"
+
+  "/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<AddToContact-debug.module>":
+    tool: phony
+    inputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/ContactApp.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/ContactModel.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.swiftmodule"]
+    outputs: ["<AddToContact-debug.module>"]
+
+  "<AddToContactPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactPackageTests.xctest/Contents/MacOS/AddToContactPackageTests"]
+    outputs: ["<AddToContactPackageTests-debug.test>"]
+
+  "<AddToContactTest-debug.module>":
+    tool: phony
+    inputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/ContactAppTest.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/ContactModelTest.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.swiftmodule"]
+    outputs: ["<AddToContactTest-debug.module>"]
+
+  "C.AddToContact-debug.module":
+    tool: shell
+    inputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Sources/AddToContact/ContactApp.swift","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Sources/AddToContact/ContactModel.swift","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/sources"]
+    outputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/ContactApp.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/ContactModel.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.swiftmodule"]
+    description: "Compiling Swift Module 'AddToContact' (2 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","AddToContact","-emit-dependencies","-emit-module","-emit-module-path","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.swiftmodule","-output-file-map","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/sources","-I","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx10.13","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/AddToContact-Swift.h","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-diagnostic-style=llvm","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","swiftknowledgebase"]
+
+  "C.AddToContactPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/ContactApp.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/ContactModel.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/ContactAppTest.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/ContactModelTest.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactPackageTests.xctest/Contents/MacOS/AddToContactPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/AddToContactPackageTests.xctest/Contents/MacOS/AddToContactPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug","-o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactPackageTests.xctest/Contents/MacOS/AddToContactPackageTests","-module-name","AddToContactPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactPackageTests.product/Objects.LinkFileList","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-diagnostic-style=llvm"]
+
+  "C.AddToContactTest-debug.module":
+    tool: shell
+    inputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Tests/AddtoContactTest/ContactAppTest.swift","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Tests/AddtoContactTest/ContactModelTest.swift","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.swiftmodule","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/sources"]
+    outputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/ContactAppTest.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/ContactModelTest.swift.o","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.swiftmodule"]
+    description: "Compiling Swift Module 'AddToContactTest' (2 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","AddToContactTest","-emit-dependencies","-emit-module","-emit-module-path","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.swiftmodule","-output-file-map","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContactTest.build/sources","-I","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug","-target","arm64-apple-macosx13.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-diagnostic-style=llvm","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","swiftknowledgebase"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Sources/AddToContact/","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Tests/","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Package.swift","/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

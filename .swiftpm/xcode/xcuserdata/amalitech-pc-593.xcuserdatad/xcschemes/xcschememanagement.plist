@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AddToContact.xcscheme_^#shared#^_</key>
+		<key>AddToContact-Package.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>AddToContact.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>SwiftKnowledgeBase-Package.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,6 +22,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>AddToContact</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AddToContactTest</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>SwiftKnowledgeBase</key>
 		<dict>
 			<key>primary</key>

@@ -15,22 +15,20 @@ import UIKit
 import SwiftUI
 #endif
 
-
 #if os(iOS)
 public struct ContactAppView: UIViewControllerRepresentable {
-    
+
     // MARK: - public variables
-    
+
     let contact: Contact
     public typealias UIViewControllerType = ContactViewController
-    @Environment(\.colorScheme) var colorScheme
-    
+
     // MARK: - Lifecycle methods
 
    public init(contact: Contact) {
        self.contact = contact
    }
-    
+
     public func makeUIViewController(context: Context) -> ContactViewController {
         let contactViewController = ContactViewController()
         contactViewController.setContact(contact)
@@ -43,14 +41,14 @@ public struct ContactAppView: UIViewControllerRepresentable {
 }
 
 public class ContactViewController: UINavigationController {
-    
+
     // MARK: public variables
-    
+
     var navController: UINavigationController!
     var contact: Contact = Contact()
-    
+
     // MARK: life cycle methods
-    
+
     public override func viewDidLoad() {
         let controller =  CNContactViewController(
             forNewContact: contact.toCNMutableContact()
@@ -59,7 +57,7 @@ public class ContactViewController: UINavigationController {
         viewControllers.append(controller)
         super.viewDidLoad()
     }
-    
+
     // MARK: - public methods
     func setContact(_ contact: Contact) {
         self.contact = contact
@@ -81,5 +79,4 @@ extension ContactViewController: CNContactViewControllerDelegate {
         true
     }
 }
-
 #endif
