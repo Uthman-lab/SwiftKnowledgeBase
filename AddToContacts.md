@@ -42,7 +42,7 @@ struct MyView: View {
 
 ## Screenshots/Examples
 <div>
-<img src="./assets/initial.png" alt="Diagram" width="300" />
+<img src="./assets/initial.png" alt="Diagram" width="300" background = "red" />
 <img src="./assets/editing.png" alt="Diagram" width="300" />
 <img src="./assets/dismiss.png" alt="Diagram" width="300" />
 </div>
