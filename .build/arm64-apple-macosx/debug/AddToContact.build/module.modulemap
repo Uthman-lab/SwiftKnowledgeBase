@@ -1,4 +1,0 @@
-module AddToContact {
-    header "/Users/amalitech-pc-593/Documents/projects/work/iOS/Researce/SwiftKnowledgeBase/.build/arm64-apple-macosx/debug/AddToContact.build/AddToContact-Swift.h"
-    requires objc
-}

@@ -1,0 +1,21 @@
+# Build artifacts
+/.build/
+/Packages/
+
+# Xcode specific files
+*.xcodeproj
+*.xcuserstate
+*.xcworkspace
+*.xcscheme
+
+# User files
+*.swp
+*.lock
+.DS_Store
+
+# Derived Data
+DerivedData/
+
+# Swift Package Manager files
+.swiftpm/xcode
+.swiftpm/xcuserstate
